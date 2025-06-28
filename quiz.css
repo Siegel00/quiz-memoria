@@ -1,0 +1,111 @@
+body {
+    background: url('https://i.pinimg.com/736x/d3/89/78/d3897826816325780da6770a5d70d49c.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    font-family: 'Bubblegum Sans', 'Comic Sans MS', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+.quiz-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 12% auto;
+    padding: 60px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    min-height: 450px;
+    box-shadow: 0 0 20px #ffffff60;
+    text-align: center;
+    color: #ffffff;
+    overflow: auto;
+}
+.question {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    display: block;
+    visibility: visible;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    visibility: visible;
+}
+.option {
+    padding: 12px;
+    background-color: #035266;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+    font-size: 1.4em;
+}
+.option:hover {
+    background-color: #e0e0e0;
+}
+.option.selected {
+    background-color: #007bff;
+    color: white;
+}
+.option.correct {
+    background-color: #28a745;
+    color: white;
+}
+.option.incorrect {
+    background-color: #dc3545;
+    color: white;
+}
+.option.disabled {
+    cursor: not-allowed;
+}
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    padding: 12px 25px;
+    background-color: #035266;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Bubblegum Sans', 'Comic Sans MS', cursive;
+    font-size: 1.4em;
+}
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #035266;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-family: 'Bubblegum Sans', 'Comic Sans MS', cursive;
+    font-size: 1.4em;
+}
+.back-btn:hover {
+    background-color: #0056b3;
+}
+#timer {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#result {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
