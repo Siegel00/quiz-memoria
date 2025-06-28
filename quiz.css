@@ -11,101 +11,164 @@ body {
     line-height: 1.6;
     font-size: 1.1em;
 }
+
 .quiz-container {
     background-color: rgba(0, 0, 0, 0.7);
     margin: 12% auto;
-    padding: 60px;
-    border-radius: 15px;
+    padding: 3.75rem; /* 60px convertido para rem (base 16px) */
+    border-radius: 0.9375rem; /* 15px convertido para rem */
     width: 90%;
     max-width: 900px;
-    min-height: 450px;
-    box-shadow: 0 0 20px #ffffff60;
+    min-height: 28.125rem; /* 450px convertido para rem */
+    box-shadow: 0 0 1.25rem #ffffff60; /* 20px convertido para rem */
     text-align: center;
     color: #ffffff;
     overflow: auto;
 }
+
 .question {
     font-size: 1.8em;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem; /* 15px convertido para rem */
     font-weight: bold;
     display: block;
     visibility: visible;
 }
+
 .options {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.75rem; /* 12px convertido para rem */
     visibility: visible;
 }
+
 .option {
-    padding: 12px;
+    padding: 0.75rem; /* 12px convertido para rem */
     background-color: #035266;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    border: 0.125rem solid #ddd; /* 2px convertido para rem */
+    border-radius: 0.5rem; /* 8px convertido para rem */
     cursor: pointer;
     text-align: left;
     transition: background-color 0.3s;
     font-size: 1.4em;
 }
+
 .option:hover {
     background-color: #e0e0e0;
 }
+
 .option.selected {
     background-color: #007bff;
     color: white;
 }
+
 .option.correct {
     background-color: #28a745;
     color: white;
 }
+
 .option.incorrect {
     background-color: #dc3545;
     color: white;
 }
+
 .option.disabled {
     cursor: not-allowed;
 }
+
 .buttons {
-    margin-top: 15px;
+    margin-top: 0.9375rem; /* 15px convertido para rem */
     display: flex;
     justify-content: space-between;
 }
+
 button {
-    padding: 12px 25px;
+    padding: 0.75rem 1.5625rem; /* 12px 25px convertido para rem */
     background-color: #035266;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem; /* 8px convertido para rem */
     cursor: pointer;
     font-family: 'Bubblegum Sans', 'Comic Sans MS', cursive;
     font-size: 1.4em;
 }
+
 button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+
 .back-btn {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 0.75rem 1.5625rem; /* 12px 25px convertido para rem */
     background-color: #035266;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    border-radius: 0.5rem; /* 8px convertido para rem */
+    margin-bottom: 0.9375rem; /* 15px convertido para rem */
     font-family: 'Bubblegum Sans', 'Comic Sans MS', cursive;
     font-size: 1.4em;
 }
+
 .back-btn:hover {
     background-color: #0056b3;
 }
+
 #timer {
     font-size: 1.2em;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem; /* 15px convertido para rem */
     font-weight: bold;
 }
+
 #result {
     display: none;
-    margin-top: 15px;
+    margin-top: 0.9375rem; /* 15px convertido para rem */
     font-size: 1.8em;
     font-weight: bold;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .quiz-container {
+        margin: 15% auto;
+        padding: 2.5rem;
+        max-width: 85%;
+        min-height: 22.5rem; /* Ajuste proporcional */
+    }
+    .question {
+        font-size: 1.5em;
+    }
+    .option {
+        font-size: 1.2em;
+        padding: 0.625rem;
+    }
+    button, .back-btn {
+        font-size: 1.2em;
+        padding: 0.625rem 1.25rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        margin: 20% auto;
+        padding: 1.5rem;
+        min-height: 18.75rem; /* Ajuste proporcional */
+    }
+    .question {
+        font-size: 1.2em;
+    }
+    .option {
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+    button, .back-btn {
+        font-size: 1em;
+        padding: 0.5rem 1rem;
+    }
+    .buttons {
+        gap: 0.5rem;
+    }
 }
